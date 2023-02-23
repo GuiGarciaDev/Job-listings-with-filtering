@@ -1,0 +1,35 @@
+.app {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    
+    .app_content {
+        width: 100%;
+        max-width: 1440px;
+        overflow: hidden;
+        background-color: var(--light-grayish-cyan);
+
+        .header {
+            background-color: var(--desaturated-dark-cyan);
+
+            .mobileImg {
+                display: flex;
+            }
+
+            .desktopImg {
+                display: none;
+            }
+            
+            @media (min-width: 375px) {
+                .mobileImg {
+                    display: none;
+                }
+
+                .desktopImg {
+                    display: flex;
+                }
+            }
+        }
+    }
+}
