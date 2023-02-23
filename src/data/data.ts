@@ -1,10 +1,36 @@
+import photosnap from '../assets/photosnap.svg'
+import manage from '../assets/manage.svg'
+import account from '../assets/account.svg'
+import myhome from '../assets/myhome.svg'
+import loop_studios from '../assets/loop-studios.svg'
+import faceit from '../assets/faceit.svg'
+import shortly from '../assets/shortly.svg'
+import insure from '../assets/insure.svg'
+import eyecam_co from '../assets/eyecam-co.svg'
+import air_filter from '../assets/the-air-filter-company.svg'
 
 
-export const jobs = [
+export interface jobType {
+  id: number;
+  company: string;
+  logo: string;
+  new: boolean;
+  featured: boolean;
+  position: string;
+  role: string;
+  level: string;
+  postedAt: string;
+  contract: string;
+  location: string;
+  languages: string[];
+  tools: string[];
+}
+
+export const jobs: jobType[] = [
   {
     "id": 1,
     "company": "Photosnap",
-    "logo": "./images/photosnap.svg",
+    "logo": photosnap,
     "new": true,
     "featured": true,
     "position": "Senior Frontend Developer",
@@ -19,7 +45,7 @@ export const jobs = [
   {
     "id": 2,
     "company": "Manage",
-    "logo": "./images/manage.svg",
+    "logo": manage,
     "new": true,
     "featured": true,
     "position": "Fullstack Developer",
@@ -34,7 +60,7 @@ export const jobs = [
   {
     "id": 3,
     "company": "Account",
-    "logo": "./images/account.svg",
+    "logo": account,
     "new": true,
     "featured": false,
     "position": "Junior Frontend Developer",
@@ -49,7 +75,7 @@ export const jobs = [
   {
     "id": 4,
     "company": "MyHome",
-    "logo": "./images/myhome.svg",
+    "logo": myhome,
     "new": false,
     "featured": false,
     "position": "Junior Frontend Developer",
@@ -64,7 +90,7 @@ export const jobs = [
   {
     "id": 5,
     "company": "Loop Studios",
-    "logo": "./images/loop-studios.svg",
+    "logo": loop_studios,
     "new": false,
     "featured": false,
     "position": "Software Engineer",
@@ -79,7 +105,7 @@ export const jobs = [
   {
     "id": 6,
     "company": "FaceIt",
-    "logo": "./images/faceit.svg",
+    "logo": faceit,
     "new": false,
     "featured": false,
     "position": "Junior Backend Developer",
@@ -94,7 +120,7 @@ export const jobs = [
   {
     "id": 7,
     "company": "Shortly",
-    "logo": "./images/shortly.svg",
+    "logo": shortly,
     "new": false,
     "featured": false,
     "position": "Junior Developer",
@@ -109,7 +135,7 @@ export const jobs = [
   {
     "id": 8,
     "company": "Insure",
-    "logo": "./images/insure.svg",
+    "logo": insure,
     "new": false,
     "featured": false,
     "position": "Junior Frontend Developer",
@@ -124,7 +150,7 @@ export const jobs = [
   {
     "id": 9,
     "company": "Eyecam Co.",
-    "logo": "./images/eyecam-co.svg",
+    "logo": eyecam_co,
     "new": false,
     "featured": false,
     "position": "Full Stack Engineer",
@@ -139,7 +165,7 @@ export const jobs = [
   {
     "id": 10,
     "company": "The Air Filter Company",
-    "logo": "./images/the-air-filter-company.svg",
+    "logo": air_filter,
     "new": false,
     "featured": false,
     "position": "Front-end Dev",
