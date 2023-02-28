@@ -3,9 +3,11 @@ import styles from "./styles.module.scss"
 
 interface JobCard {
   job: jobType
+  filter: string[]
+  setFilter: (filter: string) => void
 }
 
-export default function JobCard({ job }: JobCard) {
+export default function JobCard({ job, filter, setFilter }: JobCard) {
   return (
     <div className={styles.main}>
       <span className={styles.leftBorder}></span>
@@ -48,9 +50,30 @@ export default function JobCard({ job }: JobCard) {
         <div className={styles.main_down}>
           {job.languages.map((language) => {
             return (
-              <div className={styles.language}>
-                <span>{language}</span>
-              </div>
+              <button
+                className={styles.language}
+                onClick={() => setFilter(language)}
+                disabled={filter.includes(language)}
+                style={
+                  filter.includes(language)
+                    ? {
+                        backgroundColor: "var(--desaturated-dark-cyan)",
+                      }
+                    : {}
+                }
+              >
+                <span
+                  style={
+                    filter.includes(language)
+                      ? {
+                          color: "var(--white)",
+                        }
+                      : {}
+                  }
+                >
+                  {language}
+                </span>
+              </button>
             )
           })}
         </div>
